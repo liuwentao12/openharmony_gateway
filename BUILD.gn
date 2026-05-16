@@ -1,19 +1,25 @@
 import("//build/ohos.gni")
 
-
 ohos_shared_library("gateway") {
+  # 告诉编译器我们要编译的 cpp 文件列表
   sources = [
-    "gateway_napi.cpp"
+    "src/gateway_napi.cpp",
+    "src/network_manager.cpp",
+    "src/edge_ai_engine.cpp"
   ]
 
-  # 极其重要：告诉编译系统我们要用到鸿蒙的 NAPI 核心库
+  # 极其重要：告诉编译器去哪里找头文件
+  include_dirs = [
+    "include"
+  ]
+
+  # 极其重要：引入鸿蒙基础框架的动态库！
   external_deps = [
-    "napi:ace_napi"
+    "napi:ace_napi",
+    "hilog:libhilog"    
   ]
 
-  # 极其重要：指定生成出来的 .so 库放在系统的 module 目录下
   relative_install_dir = "module"
-
   subsystem_name = "gateway_subsystem"
   part_name = "gateway_component"
 }

@@ -17,7 +17,8 @@
     "ram": "100KB",
     "deps": {
       "components": [
-        "napi"
+        "napi",
+        "hilog"
       ],
       "third_party": []
     },
