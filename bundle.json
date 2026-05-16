@@ -1,0 +1,30 @@
+{
+  "name": "@ohos/gateway_component",
+  "description": "Smart Home Gateway Component",
+  "version": "1.0",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "gateway_project"
+  },
+  "component": {
+    "name": "gateway_component",
+    "subsystem": "gateway_subsystem",
+    "syscap": [],
+    "features": [],
+    "adapted_system_type": [ "standard" ],
+    "rom": "100KB",
+    "ram": "100KB",
+    "deps": {
+      "components": [
+        "napi"
+      ],
+      "third_party": []
+    },
+    "build": {
+      "sub_component": [
+        "//gateway_project:gateway"
+      ]
+    }
+  }
+}
