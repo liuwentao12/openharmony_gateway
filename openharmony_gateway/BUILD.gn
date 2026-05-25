@@ -1,0 +1,8 @@
+group("openharmony_gateway") {
+  deps = [
+    "adapter:gateway_adapter",
+    "hardware:gateway_hardware",
+    "napi:gateway_napi",
+    "services:gateway_services",
+  ]
+}

@@ -1,0 +1,12 @@
+source_set("gateway_services") {
+  sources = [
+    "gateway_service.cpp",
+    "device_manager.cpp",
+    "rule_engine.cpp",
+    "alarm_manager.cpp",
+  ]
+
+  include_dirs = [
+    "../interfaces/inner_api",
+  ]
+}

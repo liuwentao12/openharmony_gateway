@@ -1,0 +1,10 @@
+source_set("gateway_adapter") {
+  sources = [
+    "tcp_adapter.cpp",
+    "softbus_adapter.cpp",
+  ]
+
+  include_dirs = [
+    "../interfaces/inner_api",
+  ]
+}

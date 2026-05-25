@@ -1,24 +1,26 @@
 {
-  "name": "@ohos/gateway_component",
-  "description": "Smart Home Gateway Component",
+  "name": "@ohos/openharmony_gateway",
+  "description": "OpenHarmony gateway component",
   "version": "1.0",
   "license": "Apache License 2.0",
   "publishAs": "code-segment",
   "segment": {
-    "destPath": "iot_gateway"
+    "destPath": "iot_gateway/openharmony_gateway"
   },
   "component": {
     "name": "gateway_component",
     "subsystem": "gateway_subsystem",
     "syscap": [],
     "features": [],
-    "adapted_system_type": [ "standard" ],
+    "adapted_system_type": [
+      "standard"
+    ],
     "rom": "100KB",
     "ram": "100KB",
     "deps": {
       "components": [
-        "napi",
-        "hilog"
+        "hilog",
+        "napi"
       ],
       "third_party": []
     },

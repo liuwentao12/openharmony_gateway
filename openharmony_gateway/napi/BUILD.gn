@@ -1,0 +1,26 @@
+import("//build/ohos.gni")
+
+ohos_shared_library("gateway_napi") {
+  sources = [
+    "gateway_napi.cpp",
+  ]
+
+  include_dirs = [
+    "../interfaces/inner_api",
+  ]
+
+  deps = [
+    "../adapter:gateway_adapter",
+    "../hardware:gateway_hardware",
+    "../services:gateway_services",
+  ]
+
+  external_deps = [
+    "hilog:libhilog",
+    "napi:ace_napi",
+  ]
+
+  relative_install_dir = "module"
+  subsystem_name = "gateway_subsystem"
+  part_name = "gateway_component"
+}

@@ -1,0 +1,9 @@
+source_set("gateway_hardware") {
+  sources = [
+    "hardware_ctrl.cpp",
+  ]
+
+  include_dirs = [
+    "../interfaces/inner_api",
+  ]
+}
